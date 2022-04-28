@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Challenge.Ecommerce.Services.WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.BusquedaController.#ctor(Challenge.Ecommerce.Application.Interface.IBusquedaApplication)">
+            <summary>
+            Constructor de Busquedas
+            </summary>
+            <param name="busquedaApplication"></param>
+        </member>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.BusquedaController.Get(System.String)">
+            <summary>
+            Obtiene items
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.PaisesController.#ctor(Challenge.Ecommerce.Application.Interface.IPaisApplication)">
+            <summary>
+            Constructor de Paises
+            </summary>
+            <param name="paisApplication"></param>
+        </member>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.PaisesController.Get(System.String)">
+            <summary>
+            Obtiene el pais
+            </summary>
+            <param name="pais"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Challenge.Ecommerce.Services.WebApi.Controllers.UsuarioController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.UsuarioController.#ctor(Challenge.Ecommerce.Application.Interface.IUsuarioApplication,Microsoft.Extensions.Options.IOptions{Challenge.Ecommerce.Services.WebApi.Helpers.AppSettings})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="usuarioApplication"></param>
+            <param name="appSettings"></param>
+        </member>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.UsuarioController.Insert(Challenge.Ecommerce.Application.DTO.UsuarioDto)">
+            <summary>
+            Inserta Usuario
+            </summary>
+            <param name="usuarioDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.UsuarioController.Update(Challenge.Ecommerce.Application.DTO.UsuarioDto)">
+            <summary>
+            Actualiza Usuario
+            </summary>
+            <param name="usuarioDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Challenge.Ecommerce.Services.WebApi.Controllers.UsuarioController.Delete(System.Int32)">
+            <summary>
+            Elimina Usuario por Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -11,12 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrarions\" />
+    <ProjectReference Include="..\Challenge.Ecommerce.Comun\Challenge.Ecommerce.Comun.csproj" />
+    <ProjectReference Include="..\Challenge.Ecommerce.Domain.Entity\Challenge.Ecommerce.Domain.Entity.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Challenge.Ecommerce.Comun\Challenge.Ecommerce.Comun.csproj" />
-    <ProjectReference Include="..\Challenge.Ecommerce.Domain.Entity\Challenge.Ecommerce.Domain.Entity.csproj" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

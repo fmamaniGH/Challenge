@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Challenge.Ecommerce.Comun\Challenge.Ecommerce.Comun.csproj" />
+  </ItemGroup>
+
 </Project>

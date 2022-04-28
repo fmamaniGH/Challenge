@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Challenge.Ecommerce.Domain.Core
@@ -33,9 +32,10 @@ namespace Challenge.Ecommerce.Domain.Core
             throw new NotImplementedException();
         }
 
-        public Task Delete(object id)
+        public async Task Delete(object id)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Usuario.Delete(id);
+            await _unitOfWork.SaveChanges();
         }
 
         public void DeleteEntity(Usuario entity)
@@ -51,6 +51,7 @@ namespace Challenge.Ecommerce.Domain.Core
         public Task<Usuario> GetById(object id)
         {
             return _unitOfWork.Usuario.GetById(id);
+
         }
 
         public Task<IEnumerable<Usuario>> GetList()
@@ -58,14 +59,16 @@ namespace Challenge.Ecommerce.Domain.Core
             throw new NotImplementedException();
         }
 
-        public Task Insert(Usuario entity)
+        public async Task Insert(Usuario usuario)
         {
-            throw new NotImplementedException();
+            await _unitOfWork.Usuario.Insert(usuario);
+            await _unitOfWork.SaveChanges();
         }
 
-        public void Update(Usuario entity)
+        public async void Update(Usuario usuario)
         {
-            throw new NotImplementedException();
+           _unitOfWork.Usuario.Update(usuario);
+            await _unitOfWork.SaveChanges();
         }
     }
 }

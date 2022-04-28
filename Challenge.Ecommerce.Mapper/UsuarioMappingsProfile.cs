@@ -7,9 +7,9 @@ using Challenge.Ecommerce.Domain.Entity;
 
 namespace Challenge.Ecommerce.Mapper
 {
-    public class MappingsProfile : Profile
+    public class UsuarioMappingsProfile : Profile
     {
-        public MappingsProfile()
+        public UsuarioMappingsProfile()
         {
             CreateMap<Usuario, UsuarioDto>().ReverseMap();
         }

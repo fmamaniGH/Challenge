@@ -4,4 +4,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Challenge.Ecommerce.Application.DTO\Challenge.Ecommerce.Application.DTO.csproj" />
+    <ProjectReference Include="..\Challenge.Ecommerce.Comun\Challenge.Ecommerce.Comun.csproj" />
+    <ProjectReference Include="..\Challenge.Ecommerce.Domain.Interface\Challenge.Ecommerce.Domain.Interface.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -12,7 +12,7 @@ namespace Challenge.Ecommerce.Infrastructure.Data.Mappings
         public void Configure(EntityTypeBuilder<Usuario> builder)
         {
             builder.ToTable("Usuario");
-            builder.HasKey(c => c.UserId);           
+            builder.HasKey(c => c.UsuarioId);           
         }
     }
 }
