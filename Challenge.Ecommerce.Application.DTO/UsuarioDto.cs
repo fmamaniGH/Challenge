@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Challenge.Ecommerce.Application.DTO
+﻿namespace Challenge.Ecommerce.Application.DTO
 {
     public class UsuarioDto
     {

@@ -13,29 +13,37 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Servicio", "Servicio", "{14
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Transversal", "Transversal", "{84F98989-BB9A-4605-AB5B-7773803585DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Infrastructure.Data", "Challenge.Ecommerce.Infrastructure.Data\Challenge.Ecommerce.Infrastructure.Data.csproj", "{C06FF786-9589-4D33-8D2B-D5AFBCB8A267}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Infrastructure.Data", "Challenge.Ecommerce.Infrastructure.Data\Challenge.Ecommerce.Infrastructure.Data.csproj", "{C06FF786-9589-4D33-8D2B-D5AFBCB8A267}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Infrastructure.Interface", "Challenge.Ecommerce.Infrastructure.Interface\Challenge.Ecommerce.Infrastructure.Interface.csproj", "{8318286D-FDFF-46A3-A588-6F9C26B03CB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Infrastructure.Interface", "Challenge.Ecommerce.Infrastructure.Interface\Challenge.Ecommerce.Infrastructure.Interface.csproj", "{8318286D-FDFF-46A3-A588-6F9C26B03CB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Infrastructure.Repository", "Challenge.Ecommerce.Infrastructure.Repository\Challenge.Ecommerce.Infrastructure.Repository.csproj", "{7681D205-62EB-44CA-A6B3-C282C1CD588D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Infrastructure.Repository", "Challenge.Ecommerce.Infrastructure.Repository\Challenge.Ecommerce.Infrastructure.Repository.csproj", "{7681D205-62EB-44CA-A6B3-C282C1CD588D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Domain.Core", "Challenge.Ecommerce.Domain.Core\Challenge.Ecommerce.Domain.Core.csproj", "{4E13C3D6-AB87-451D-B393-9F8D55A027B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Domain.Core", "Challenge.Ecommerce.Domain.Core\Challenge.Ecommerce.Domain.Core.csproj", "{4E13C3D6-AB87-451D-B393-9F8D55A027B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Domain.Entity", "Challenge.Ecommerce.Domain.Entity\Challenge.Ecommerce.Domain.Entity.csproj", "{FAB0DB51-0D5C-414B-BA07-F20645971194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Domain.Entity", "Challenge.Ecommerce.Domain.Entity\Challenge.Ecommerce.Domain.Entity.csproj", "{FAB0DB51-0D5C-414B-BA07-F20645971194}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Domain.Interface", "Challenge.Ecommerce.Domain.Interface\Challenge.Ecommerce.Domain.Interface.csproj", "{5376D0C4-158F-423B-97C9-11A04F39C116}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Domain.Interface", "Challenge.Ecommerce.Domain.Interface\Challenge.Ecommerce.Domain.Interface.csproj", "{5376D0C4-158F-423B-97C9-11A04F39C116}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Application.Main", "Challenge.Ecommerce.Application.Main\Challenge.Ecommerce.Application.Main.csproj", "{886146BA-AB9B-4A81-9097-FD3C1E663406}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Application.Main", "Challenge.Ecommerce.Application.Main\Challenge.Ecommerce.Application.Main.csproj", "{886146BA-AB9B-4A81-9097-FD3C1E663406}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Application.Interface", "Challenge.Ecommerce.Application.Interface\Challenge.Ecommerce.Application.Interface.csproj", "{10A2A586-FDE2-4009-B401-112E513DDF33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Application.Interface", "Challenge.Ecommerce.Application.Interface\Challenge.Ecommerce.Application.Interface.csproj", "{10A2A586-FDE2-4009-B401-112E513DDF33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Application.DTO", "Challenge.Ecommerce.Application.DTO\Challenge.Ecommerce.Application.DTO.csproj", "{5F54AB5B-E5C8-472B-8EE1-4D93E99D19F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Application.DTO", "Challenge.Ecommerce.Application.DTO\Challenge.Ecommerce.Application.DTO.csproj", "{5F54AB5B-E5C8-472B-8EE1-4D93E99D19F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Services.WebApi", "Challenge.Ecommerce.Services.WebApi\Challenge.Ecommerce.Services.WebApi.csproj", "{0419E8B4-F041-4C1E-BE3F-0A28C0ACBFD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Services.WebApi", "Challenge.Ecommerce.Services.WebApi\Challenge.Ecommerce.Services.WebApi.csproj", "{0419E8B4-F041-4C1E-BE3F-0A28C0ACBFD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Comun", "Challenge.Ecommerce.Comun\Challenge.Ecommerce.Comun.csproj", "{CA1A73D1-CDAB-45DC-AC62-0B73F510DF7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Comun", "Challenge.Ecommerce.Comun\Challenge.Ecommerce.Comun.csproj", "{CA1A73D1-CDAB-45DC-AC62-0B73F510DF7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Mapper", "Challenge.Ecommerce.Mapper\Challenge.Ecommerce.Mapper.csproj", "{C5C0D981-4492-4E6B-9666-DE7B3F974B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Challenge.Ecommerce.Mapper", "Challenge.Ecommerce.Mapper\Challenge.Ecommerce.Mapper.csproj", "{C5C0D981-4492-4E6B-9666-DE7B3F974B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Currency", "Challenge.Ecommerce.Currency\Challenge.Ecommerce.Currency.csproj", "{95B48E23-DA12-4C93-A4D0-71A91BED8FE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit Test", "Unit Test", "{9DCD1A90-DDC7-4046-9560-27F061B8CD60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Test", "Challenge.Ecommerce.Test\Challenge.Ecommerce.Test.csproj", "{BB75E249-8A05-4BBF-B249-8A3D5AB6C6B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Challenge.Ecommerce.Application.Test", "Challenge.Ecommerce.Application.Test\Challenge.Ecommerce.Application.Test.csproj", "{5CD24825-D366-4ED9-9DEB-ED57C95A5D5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +99,18 @@ Global
 		{C5C0D981-4492-4E6B-9666-DE7B3F974B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5C0D981-4492-4E6B-9666-DE7B3F974B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5C0D981-4492-4E6B-9666-DE7B3F974B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95B48E23-DA12-4C93-A4D0-71A91BED8FE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95B48E23-DA12-4C93-A4D0-71A91BED8FE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95B48E23-DA12-4C93-A4D0-71A91BED8FE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95B48E23-DA12-4C93-A4D0-71A91BED8FE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB75E249-8A05-4BBF-B249-8A3D5AB6C6B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB75E249-8A05-4BBF-B249-8A3D5AB6C6B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB75E249-8A05-4BBF-B249-8A3D5AB6C6B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB75E249-8A05-4BBF-B249-8A3D5AB6C6B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CD24825-D366-4ED9-9DEB-ED57C95A5D5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CD24825-D366-4ED9-9DEB-ED57C95A5D5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CD24825-D366-4ED9-9DEB-ED57C95A5D5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CD24825-D366-4ED9-9DEB-ED57C95A5D5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -108,6 +128,8 @@ Global
 		{0419E8B4-F041-4C1E-BE3F-0A28C0ACBFD0} = {14226285-A9E1-48E5-9CA6-47B8C4800078}
 		{CA1A73D1-CDAB-45DC-AC62-0B73F510DF7D} = {84F98989-BB9A-4605-AB5B-7773803585DD}
 		{C5C0D981-4492-4E6B-9666-DE7B3F974B59} = {84F98989-BB9A-4605-AB5B-7773803585DD}
+		{BB75E249-8A05-4BBF-B249-8A3D5AB6C6B3} = {9DCD1A90-DDC7-4046-9560-27F061B8CD60}
+		{5CD24825-D366-4ED9-9DEB-ED57C95A5D5F} = {9DCD1A90-DDC7-4046-9560-27F061B8CD60}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1BEC51BC-425C-4A9F-830E-7B09DF580495}

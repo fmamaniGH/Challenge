@@ -3,20 +3,28 @@ using Challenge.Ecommerce.Application.Interface;
 using Challenge.Ecommerce.Comun;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Challenge.Ecommerce.Application.Main
 {
     public class BusquedaApplication : IBusquedaApplication
-
     {
+
+        /// <summary>
+        /// Se busca items en api de ML
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns>Items</returns>
         public async Task<Response<BusquedaDto>> GetItems(string item)
         {
             var response = new Response<BusquedaDto>();
-
+            if (string.IsNullOrEmpty(item))
+            {
+                response.IsSuccess = false;
+                response.Message = "Errores de validación";
+                return response;
+            }
             try
             {
                 using (var httpClient = new HttpClient())

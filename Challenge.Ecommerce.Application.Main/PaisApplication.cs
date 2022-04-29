@@ -3,20 +3,29 @@ using Challenge.Ecommerce.Application.Interface;
 using Challenge.Ecommerce.Comun;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Challenge.Ecommerce.Application.Main
 {
     public class PaisApplication : IPaisApplication
     {
-
+        /// <summary>
+        /// Se busca paises en API de ML
+        /// </summary>
+        /// <param name="pais"></param>
+        /// <returns>Paises</returns>
         public async Task<Response<PaisDto>> GetPais(string pais)
         {
             var response = new Response<PaisDto>();
- 
+
+            if (string.IsNullOrEmpty(pais))
+            {
+                response.IsSuccess = false;
+                response.Message = "Errores de validación";
+                return response;
+            }
+
             try
             {
                 using (var httpClient = new HttpClient())

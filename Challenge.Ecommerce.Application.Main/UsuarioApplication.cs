@@ -26,8 +26,15 @@ namespace Challenge.Ecommerce.Application.Main
         public async Task<Response<UsuarioDto>> Authenticate(string userName, string password)
         {
             var response = new Response<UsuarioDto>();
+            if (string.IsNullOrEmpty(userName) || string.IsNullOrEmpty(password))
+            {
+                response.IsSuccess = false;
+                response.Message = "Errores de validación";
+                return response;
+            }
+
             try
-            {           
+            {               
                 var usuario = await _usuarioDomain.Authenticate(userName,password);
                 response.Data = _mapper.Map<UsuarioDto>(usuario);
 
@@ -39,6 +46,12 @@ namespace Challenge.Ecommerce.Application.Main
                         response.Message = "Exito";
                         return response;
                     }
+                }
+                else
+                {
+                    response.IsSuccess = false;
+                    response.Message = "Usuario no existe";
+                    return response;
                 }
             }
             catch (InvalidOperationException)

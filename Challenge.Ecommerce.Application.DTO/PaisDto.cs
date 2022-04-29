@@ -2,7 +2,6 @@
 
 namespace Challenge.Ecommerce.Application.DTO
 {
-
     public class PaisDto 
     {
         public string id { get; set; }

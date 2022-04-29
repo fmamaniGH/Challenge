@@ -1,34 +1,29 @@
+using AutoMapper;
+using Challenge.Ecommerce.Application.Interface;
+using Challenge.Ecommerce.Application.Main;
+using Challenge.Ecommerce.Comun;
+using Challenge.Ecommerce.Domain.Core;
+using Challenge.Ecommerce.Domain.Interface;
+using Challenge.Ecommerce.Infrastructure.Data;
+using Challenge.Ecommerce.Infrastructure.Interface;
+using Challenge.Ecommerce.Infrastructure.Repository;
+using Challenge.Ecommerce.Infrastructure.Repository.UnitOfWork;
+using Challenge.Ecommerce.Mapper;
+using Challenge.Ecommerce.Services.WebApi.Helpers;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using Challenge.Ecommerce.Comun;
-using Challenge.Ecommerce.Mapper;
-using Challenge.Ecommerce.Infrastructure.Interface;
-using Challenge.Ecommerce.Infrastructure.Repository;
-using Challenge.Ecommerce.Domain.Interface;
-using Challenge.Ecommerce.Domain.Core;
-using Challenge.Ecommerce.Application.Interface;
-using Challenge.Ecommerce.Application.Main;
-using Challenge.Ecommerce.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
-using Swashbuckle.AspNetCore.Swagger;
-using Microsoft.OpenApi.Models;
-using System.Reflection;
-using System.IO;
-using Challenge.Ecommerce.Services.WebApi.Helpers;
-using Challenge.Ecommerce.Infrastructure.Repository.UnitOfWork;
-using System.Text;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Challenge.Ecommerce.Services.WebApi
 {
@@ -56,7 +51,14 @@ namespace Challenge.Ecommerce.Services.WebApi
 
             var appSettings = appSettingsSection.Get<AppSettings>();
 
-            services.AddAutoMapper(x => x.AddProfile(new UsuarioMappingsProfile()));
+            // Auto Mapper Configurations
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new UsuarioMappingsProfile());
+            });
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IConnectionFactory, ConnectionFactory>();
 
