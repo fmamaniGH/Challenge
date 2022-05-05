@@ -26,6 +26,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Challenge.Ecommerce.Transversal.Logging;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Models;
 
 namespace Challenge.Ecommerce.Services.WebApi
 {
@@ -172,12 +173,19 @@ namespace Challenge.Ecommerce.Services.WebApi
                     Title = $"Api Challenge Versión 1.0",
                     Version = groupName,
                     Description = "Endpoints Rest Api Challenge",
+                    TermsOfService =  new Uri("http://challenge.com"),
                     Contact = new OpenApiContact
                     {
                         Name = "Anonimo ",
                         Email = "fmamani@gmail.com",
-                        Url = new Uri("https://localhost.com/"),
+                        Url = new Uri("https://localhost.com/contact"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Use under LICX",
+                        Url= new Uri("https://localhost.com/license")
                     }
+
                 });
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
@@ -192,6 +200,7 @@ namespace Challenge.Ecommerce.Services.WebApi
                     Type = SecuritySchemeType.ApiKey
                 });
 
+                //Seguridad global del tipo OAuth 2 y usar un token del tipo portador
                 options.AddSecurityRequirement(new OpenApiSecurityRequirement {
                 {
                     new OpenApiSecurityScheme
