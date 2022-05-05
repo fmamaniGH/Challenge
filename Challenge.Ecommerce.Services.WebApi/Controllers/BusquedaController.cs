@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Challenge.Ecommerce.Services.WebApi.Controllers
 {
     [Authorize]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class BusquedaController : Controller
     {
@@ -26,7 +26,7 @@ namespace Challenge.Ecommerce.Services.WebApi.Controllers
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        [HttpGet("{item}")]
+        [HttpGet("Get/{item}")]
         public async Task<IActionResult> Get(string item)
         {
             if (string.IsNullOrEmpty(item))

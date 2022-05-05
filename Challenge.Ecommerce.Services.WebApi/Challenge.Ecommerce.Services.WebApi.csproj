@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -34,6 +34,7 @@
     <ProjectReference Include="..\Challenge.Ecommerce.Infrastructure.Interface\Challenge.Ecommerce.Infrastructure.Interface.csproj" />
     <ProjectReference Include="..\Challenge.Ecommerce.Infrastructure.Repository\Challenge.Ecommerce.Infrastructure.Repository.csproj" />
     <ProjectReference Include="..\Challenge.Ecommerce.Mapper\Challenge.Ecommerce.Mapper.csproj" />
+    <ProjectReference Include="..\Challenge.Ecommerce.Transversal.Logging\Challenge.Ecommerce.Transversal.Logging.csproj" />
   </ItemGroup>
 
 

@@ -16,11 +16,14 @@ namespace Challenge.Ecommerce.Application.Main
     {
         private readonly IUsuarioDomain _usuarioDomain;
         private readonly IMapper _mapper;
+        private readonly IAppLogger<UsuarioApplication> _logger;
 
-        public UsuarioApplication(IUsuarioDomain usuarioDomain, IMapper mapper)
+
+        public UsuarioApplication(IUsuarioDomain usuarioDomain, IMapper mapper, IAppLogger<UsuarioApplication> logger = null)
         {
             _usuarioDomain = usuarioDomain;
             _mapper = mapper;
+            _logger = logger;
         }
 
         public async Task<Response<UsuarioDto>> Authenticate(string userName, string password)
@@ -30,6 +33,7 @@ namespace Challenge.Ecommerce.Application.Main
             {
                 response.IsSuccess = false;
                 response.Message = "Errores de validación";
+                _logger.LogError(response.Message);
                 return response;
             }
 
@@ -44,6 +48,7 @@ namespace Challenge.Ecommerce.Application.Main
                     {
                         response.IsSuccess = true;
                         response.Message = "Exito";
+                        _logger.LogInformation(response.Message);
                         return response;
                     }
                 }
@@ -51,6 +56,7 @@ namespace Challenge.Ecommerce.Application.Main
                 {
                     response.IsSuccess = false;
                     response.Message = "Usuario no existe";
+                    _logger.LogError(response.Message);
                     return response;
                 }
             }
@@ -58,11 +64,13 @@ namespace Challenge.Ecommerce.Application.Main
             {
                 response.IsSuccess = false;
                 response.Message = "Usuario no existe";
+                _logger.LogError(response.Message);
             }
             catch (Exception ex)
             {
                 response.IsSuccess = false;
                 response.Message = ex.Message;
+                _logger.LogError(response.Message);
             }
             return response;
         }

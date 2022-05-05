@@ -19,7 +19,7 @@ namespace Challenge.Ecommerce.Services.WebApi.Controllers
     /// 
     /// </summary>
     [Authorize]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
    
     public class UsuarioController : Controller
@@ -39,7 +39,7 @@ namespace Challenge.Ecommerce.Services.WebApi.Controllers
         }
 
         [AllowAnonymous]
-        [HttpPost]
+        [HttpPost("Authenticate")]
         public async Task<IActionResult> Authenticate([FromBody] UsuarioDto usuarioDto)
         {
             var response = await _usuarioApplication.Authenticate(usuarioDto.UserName, usuarioDto.Password);
@@ -62,7 +62,7 @@ namespace Challenge.Ecommerce.Services.WebApi.Controllers
         /// </summary>
         /// <param name="usuarioDto"></param>
         /// <returns></returns>
-        [HttpPost]
+        [HttpPost("Insert")]
         public IActionResult Insert([FromBody] UsuarioDto usuarioDto)
         {
             if (usuarioDto == null)
@@ -87,7 +87,7 @@ namespace Challenge.Ecommerce.Services.WebApi.Controllers
         /// </summary>
         /// <param name="usuarioDto"></param>
         /// <returns></returns>
-        [HttpPut]
+        [HttpPut("Update")]
         public IActionResult Update([FromBody] UsuarioDto usuarioDto)
         {
             if (usuarioDto == null)
@@ -105,7 +105,7 @@ namespace Challenge.Ecommerce.Services.WebApi.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        [HttpDelete]
+        [HttpDelete("Delete")]
         public IActionResult Delete([FromBody] int id)
         {
             if (id < 0 )

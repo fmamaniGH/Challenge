@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 namespace Challenge.Ecommerce.Services.WebApi.Controllers
 {
     [Authorize]
-    [Route("api/[controller]/[action]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class PaisesController : Controller
     {
@@ -26,7 +26,7 @@ namespace Challenge.Ecommerce.Services.WebApi.Controllers
         /// </summary>
         /// <param name="pais"></param>
         /// <returns></returns>
-        [HttpGet("{pais}")]
+        [HttpGet("Get/{pais}")]
         public async Task<IActionResult> Get(string pais)
         {       
             if (string.IsNullOrEmpty(pais))

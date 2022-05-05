@@ -24,6 +24,8 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using Challenge.Ecommerce.Transversal.Logging;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Challenge.Ecommerce.Services.WebApi
 {
@@ -45,19 +47,19 @@ namespace Challenge.Ecommerce.Services.WebApi
             services.AddCors(options => options.AddPolicy(myPolicy, builder => builder.WithOrigins(Configuration["Config:OriginCors"])
                                                                                         .AllowAnyHeader()
                                                                                         .AllowAnyMethod()));
-            services.AddMvc();
-            var appSettingsSection = Configuration.GetSection("Config");
-            services.Configure<AppSettings>(appSettingsSection);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Latest);
 
-            var appSettings = appSettingsSection.Get<AppSettings>();
-
-            // Auto Mapper Configurations
+            // Auto Mapper Configurations, a partir version 3.0. Sin automapper
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new UsuarioMappingsProfile());
             });
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
+
+            var appSettingsSection = Configuration.GetSection("Config");
+            services.Configure<AppSettings>(appSettingsSection);
+            var appSettings = appSettingsSection.Get<AppSettings>();
 
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddSingleton<IConnectionFactory, ConnectionFactory>();
@@ -67,7 +69,7 @@ namespace Challenge.Ecommerce.Services.WebApi
             services.AddScoped<IUsuarioApplication, UsuarioApplication>();
             services.AddScoped<IUsuarioDomain, UsuarioDomain>();
             services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-
+            services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
             services.AddSingleton<IUnitOfWork>(option => new UnitOfWork(new ApplicationContext(connectionString)));
 
             var key = Encoding.ASCII.GetBytes(appSettings.Secret);
@@ -113,9 +115,9 @@ namespace Challenge.Ecommerce.Services.WebApi
                 };
             });
 
-
-            services.AddControllers().AddNewtonsoftJson(x =>
-            x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+            //No se usa version a partir 3.0
+            //services.AddControllers().AddNewtonsoftJson(x =>
+            //x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
 
             AddSwagger(services);
         }
@@ -137,8 +139,11 @@ namespace Challenge.Ecommerce.Services.WebApi
 
             app.UseCors(myPolicy);
             app.UseAuthentication();
+
+            //Habilita los endpoints
             app.UseRouting();
 
+            //Habilita las capacidades de autorizacion en web api
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
